@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Park Service Search Tool</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Manrope:300,400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">Search The National Park Service Database To Get A List Of Parks In Your Area</header>
+
+  <form id="form">
+
+    <label for="stateCode" id="stateCodeLabel">Enter a two-letter state code (required)</label>
+    <br>
+    <input type="text" placeholder="e.g. TX" id="stateCode" maxlength="2" minlength="2" required>
+    <br>
+
+    <label for="numberOfResults" id="numberOfResultsLabel">Enter the number of results to display. Enter a number between 1 and 50. (required)</label>
+    <br>
+    <input type="number" placeholder="e.g. 5" id="numberOfResults" max="50" min="1" required>
+    <br>
+
+    <input type="submit" id="searchButton" value="Search">
+  </form>
+
+  <section class="results"></section>
+
+  <script
+  src="https://code.jquery.com/jquery-3.5.0.js"
+  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+  
+</body>
+</html>

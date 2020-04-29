@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+.header {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-weight: 600;
+  font-size: 15pt;
+}
+
+#stateCodeLabel {
+  color: blueviolet;
+  margin-top: 100px;
+}
+
+#stateCode {
+  font-size: 30pt;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 500px;
+}
+
+#numberOfResultsLabel {
+  color: blueviolet;
+}
+
+#numberOfResults {
+  font-size: 30pt;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 500px;
+}
+
+#searchButton {
+  color: blueviolet;
+  border: solid 2px;
+  border-radius: 5px;
+  font-size: 20pt;
+  /* margin-top: 100px; */
+  cursor: pointer;
+}
