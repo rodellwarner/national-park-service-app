@@ -31,13 +31,23 @@ function getListOfParks() {
   };
 
   const queryString = formatQueryParams(params)
-  console.log(queryString);
+  console.log('queryString is ' + queryString);
 
   const url = parksEndpoint + '?' + queryString
 
   fetch(url, params)
     .then(response => response.json())
-    .then(responseJson => console.log(responseJson));
+    .then(responseJson => showParkList(responseJson));
+}
+
+function showParkList(info) {
+  console.log(info);
+  const totalNumberOfParksInState = info.total;
+  console.log('The total number of parks in ' + $('#stateCode').val() + ' is ' + info.total);
+  $('.results').empty();
+  $('.results').removeClass('hidden')
+  $('.results').append('The total number of parks in ' + $('#stateCode').val() + ' is ' + info.total);
+  console.log('showParkList ran');
 }
 
 function handleSearchNationalParkService() {

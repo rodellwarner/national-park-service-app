@@ -53,3 +53,8 @@
 .hidden {
   display: none;
 }
+
+.results {
+  padding-top: 50px;
+  font-size: 20pt;
+}
