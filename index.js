@@ -51,12 +51,10 @@ function showParkList(info) {
   // console.log(info.data[0].fullName, info.data[0].description, info.data[0].url);
   // console.log(info.data[1].fullName, info.data[1].description, info.data[1].url);
 
-
   for (let i = 0; i < info.data.length; i++) {
       console.log(info.data[i].fullName, info.data[i].url);
       $('.results').append(info.data[i].fullName, info.data[i].url);
   }
-
 }
 
 function handleSearchNationalParkService() {
