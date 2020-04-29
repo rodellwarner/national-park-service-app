@@ -45,7 +45,7 @@ function showParkList(info) {
   const totalNumberOfParksInState = info.total;
   $('.results').empty();
   $('.results').removeClass('hidden');
-  $('.results').append('The total number of national parks in ' + $('#stateCode').val() + ' is ' + info.total + '. Here is a list of ' + $('#numberOfResults').val() + ' of them.');
+  $('.results').append('<h2>The total number of national parks in ' + $('#stateCode').val() + ' is ' + info.total + '.<br>Here is a list of ' + $('#numberOfResults').val() + ' of them.</h2>');
   console.log('showParkList ran');
   // console.log(info.data.length);
   // console.log(info.data[0].fullName, info.data[0].description, info.data[0].url);
@@ -53,7 +53,7 @@ function showParkList(info) {
 
   for (let i = 0; i < info.data.length; i++) {
       console.log(info.data[i].fullName, info.data[i].url);
-      $('.results').append(info.data[i].fullName, info.data[i].url);
+      $('.results').append('<p><b>' + info.data[i].fullName + '</b></p>', '<p>' + '<a href="' + info.data[i].url + '" target="_blank">' + info.data[i].url + '</a>' + '</p><br>');
   }
 }
 
