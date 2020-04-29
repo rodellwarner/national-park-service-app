@@ -43,11 +43,17 @@ function getListOfParks() {
 function showParkList(info) {
   console.log(info);
   const totalNumberOfParksInState = info.total;
-  console.log('The total number of parks in ' + $('#stateCode').val() + ' is ' + info.total);
   $('.results').empty();
-  $('.results').removeClass('hidden')
-  $('.results').append('The total number of parks in ' + $('#stateCode').val() + ' is ' + info.total);
+  $('.results').removeClass('hidden');
+  $('.results').append('The total number of national parks in ' + $('#stateCode').val() + ' is ' + info.total);
   console.log('showParkList ran');
+  const groupsOfInfoAboutParks = info.data.map(function() {
+    for (let i = 0; i < info.data.length; i++) {
+      return (info.data[i].fullName);
+    }
+  });
+  console.log(groupsOfInfoAboutParks);
+    // park => 'Park Name: ' + park.data[])
 }
 
 function handleSearchNationalParkService() {
